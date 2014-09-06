@@ -27,6 +27,7 @@ Available:
 
 ```
 .figure--border   - A figure framed with a border.
+.figure--overlay  - An image with an optional overlayed caption.
 ```
 
 Coming:
@@ -39,7 +40,6 @@ Coming:
 .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
 .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
 .figure--aside    - A figure with the caption as marginalia when possible.
-.figure--overlay  - An image with an optional overlayed caption.
 ```
 
 Potential:

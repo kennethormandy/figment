@@ -1,10 +1,13 @@
-/*! Figment v0.1.0 • kennethormandy.com/journal/fig • MIT License */
+/*! Figment v0.1.0 • github.com/kennethormandy/figment • MIT License */
 
 // Variables
 
 $fig-numbered:     true  !default;
 $fig-border-color: #555  !default;
+$fig-bg-color:     #FFF !default;
 $fig-container:    700px !default;
+$fig-gutter:       1em   !default;
+$fig-line-height:  1.5 !default;
 
 body {
   counter-reset: fig;
@@ -16,7 +19,8 @@ body {
 //
 // Markup:
 // <figure class="{$modifiers}">
-//   <img src="public/images/example-1.jpg" alt="" />
+//   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.
 // </figure>
 //
 // .figure--border   - A figure framed with a border.
@@ -63,15 +67,13 @@ figure {
 //
 // Markup:
 // <figure class="{$modifiers}">
-//   <img src="public/images/example-1.jpg" alt="" />
-//   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or
-//     <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>.
-//     Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>).
-//     Chateau de Malmaison, Rueil-Malmaison.
+//   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.
 //   </figcaption>
 // </figure>
 //
 // .figure--border   - A figure framed with a border.
+// .figure--overlay  - An image with an optional overlayed caption.
 //
 // Styleguide 1.1.
 
@@ -82,12 +84,11 @@ figure {
 // .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
 // .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
 // .figure--aside    - A figure with the caption as marginalia when possible.
-// .figure--overlay  - An image with an optional overlayed caption.
 
 .figure-caption,
 figcaption {
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1em * ($fig-line-height / 3);
+  margin-bottom: 1em * $fig-line-height;
   @if $fig-numbered == true {
     &:before {
       content: "Fig. " counter(fig) " ";
@@ -101,4 +102,25 @@ figcaption {
   // @include media($mid) {
   //   padding: 0.5em
   // }
+}
+
+.figure--overlay {
+  position: relative;
+  .figure-caption,
+  figcaption {
+    @media (min-width: $fig-container * 0.75) {
+      font-size: 0.8em; // ?
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: $fig-gutter;
+      left: $fig-gutter;
+      padding: $fig-gutter;
+      max-width: $fig-container / 3;
+      // float: left;
+      background-color: rgba($fig-bg-color, 0.75);
+      text-shadow: 0 0 5px $fig-bg-color;
+    }
+  }
 }
