@@ -1,0 +1,20 @@
+{
+  "name": "figment",
+  "version": "0.0.0",
+  "description": "Editorial figure and caption pairings for mobile-first layouts..",
+  "homepage": "https://github.com/kennethormandy/figment",
+  "author": "Kenneth Ormandy <kenneth@chloi.io> (http://kennethormandy.com)",
+  "license": "MIT",
+  "private": true,
+  "repository": "git@github.com:kennethormandy/fig.git",
+  "keywords": [],
+  "scripts": {
+    "styleguide": "kss-node ./ examples/ --mask figment.scss --template _template/",
+    "start": "npm run styleguide && harp server",
+    "compile": "harp compile",
+    "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/fig are greatly appriciated.\" && exit 1"
+  },
+  "devDependencies": {
+    "kss": "~1.0.0"
+  }
+}
