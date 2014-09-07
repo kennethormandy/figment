@@ -64,7 +64,6 @@ figure {
 
 .figure--browser {
   position: relative;
-
   img,
   svg,
   object,
@@ -80,13 +79,12 @@ figure {
     box-sizing: border-box;
     border-top: 1px solid darken($fig-bg-color, 20%);
   }
-
   &:after,
   &:before{
     box-sizing: border-box;
-    line-height: 1;
-  }
+    position: absolute;
 
+  }
   &:before{
     content: "\00B7\00B7\00B7";
     user-select: none;
@@ -99,37 +97,30 @@ figure {
     width: 100%;
     line-height: 0.375;
     padding-left: 0.125em;
-    position: absolute;
   }
-
   &:after{
     content: attr(data-url);
-    position: absolute;
     display: block;
     background: #FFF;
     line-height: 0.25;
     font-size: 0.6em;
     padding: 0.833333333em;
     height: 2.075em;
-    box-sizing: border-box;
-    color: red;
     font-family: "Verdana", sans-serif;
     color: darken($fig-bg-color, 25%);
     text-align: left;
-    // color: #FFF;
-    width: 1em;
     margin-top: 0.66em;
     margin-right: 1.041666667em;
     border: 1px solid darken($fig-bg-color, 20%);
     top: 0;
     right: 0;
     width: 80%;
+    border-radius: 1px;
     @media (min-width: $fig-container * 0.75) {
       width: 88%; // Could use flexbox instead
     }
-
-    border-radius: 1px;
   }
+}
 
   .figure-caption,
   figcaption {
@@ -173,10 +164,6 @@ figcaption {
       font-feature-settings: "liga", "kern", "pnum", "lnum", "smcp", "c2sc";
     }
   }
-  // padding: 0.25em;
-  // @include media($mid) {
-  //   padding: 0.5em
-  // }
 }
 
 .figure--overlay {
