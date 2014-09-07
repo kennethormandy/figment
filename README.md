@@ -47,7 +47,6 @@ Potential:
 ```
 .figure--right
 .figure--left
-.figure--split (would rather have some kind of flexbox dyptic triptych thing, or just leave that for another library you’re already using that has grid classes)
 .figure--crop (marginal image that can acceptably bleed off the canvas)
 ```
 

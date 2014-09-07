@@ -41,14 +41,54 @@ figure {
   counter-increment: fig;
   margin-left: 0;
   margin-right: 0;
+  display: block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
   img,
   svg,
   object,
   embed,
   video,
   iframe {
+    flex: 1;
+    // flex-shrink
     display: block;
     width: 100%;
+
+    // Figure with children
+    //
+    // Diptychs, triptychs, etc.
+    //
+    // Markup:
+    // <figure class="{$modifiers}">
+    //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+    //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+    //   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+    // </figure>
+    //
+    // .figure--aside                    - A figure with the caption as marginalia when possible.
+    // .figure--border                   - A figure framed with a border.
+    // .figure--breakout                 - A figure that visually breaks the container when there is space available.
+    // .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
+    // .figure--breakout.figure--border   - A combination of the breakout and border modules.
+    //
+    // Styleguide 1.2.
+    + img,
+    + svg,
+    + object,
+    + embed,
+    + video,
+    + iframe {
+      margin-left: $fig-gutter / 3;
+      @media (min-width: $fig-container * 1.1) {
+        margin-left: $fig-gutter;
+        margin-bottom: 1em * $fig-line-height;
+      }
+    }
   }
 }
 
@@ -160,8 +200,7 @@ figure {
 // Markup:
 // <figure class="{$modifiers}">
 //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-//   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.
-//   </figcaption>
+//   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 // </figure>
 //
 // .figure--aside                    - A figure with the caption as marginalia when possible.
