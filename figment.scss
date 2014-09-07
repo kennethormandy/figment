@@ -24,9 +24,9 @@ body {
 //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 // </figure>
 //
-// .figure--border   - A figure framed with a border.
-// .figure--browser  - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
-// .figure--breakout - A figure that visually breaks the container when there is space available.
+// .figure--border    - A figure framed with a border.
+// .figure--browser   - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
+// .figure--breakout  - A figure that visually breaks the container when there is space available.
 //
 // Styleguide 1.
 
@@ -150,7 +150,6 @@ figure {
       margin-right: $fig-col-width * 3;
     }
   }
-
 }
 
 // Figure with Caption
@@ -164,6 +163,7 @@ figure {
 //   </figcaption>
 // </figure>
 //
+// .figure--aside                    - A figure with the caption as marginalia when possible.
 // .figure--border                   - A figure framed with a border.
 // .figure--browser                  - A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
 // .figure--breakout                 - A figure that visually breaks the container when there is space available.
@@ -176,10 +176,10 @@ figure {
 // .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 // .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
 // .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
-// .figure--aside    - A figure with the caption as marginalia when possible.
 
 .figure-caption,
 figcaption {
+  display: block;
   margin-top: 1em * ($fig-line-height / 3);
   margin-bottom: 1em * $fig-line-height;
   @if $fig-numbered == true {
@@ -193,13 +193,28 @@ figcaption {
   }
 }
 
+.figure--aside {
+  position: relative;
+  figcaption {
+    @media (min-width: $fig-container * 1.66) {
+      position: absolute;
+      right: (-$fig-col-width * 3) - $fig-gutter;
+      top: 0;
+      font-size: 0.8em;
+      width: $fig-col-width * 3;
+    }
+    @media (min-width: $fig-container * 2) {
+      font-size: 1em;
+    }
+  }
+}
+
 .figure--overlay {
   position: relative;
   .figure-caption,
   figcaption {
     @media (min-width: $fig-container * 0.75) {
       font-size: 0.8em; // ?
-      display: block;
       margin-top: 0;
       margin-bottom: 0;
       position: absolute;

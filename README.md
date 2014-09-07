@@ -26,6 +26,7 @@ open http://localhost:9000/examples/section-1
 Available:
 
 ```
+.figure--aside    - A figure with the caption as marginalia when possible.
 .figure--border   - A figure framed with a border.
 .figure--browser  - A figure framed with browser chrome.
 .figure--breakout - A figure that visually breaks the container when there is space available.
@@ -39,7 +40,6 @@ Coming:
 .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
 .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
-.figure--aside    - A figure with the caption as marginalia when possible.
 ```
 
 Potential:
