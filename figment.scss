@@ -49,16 +49,17 @@ figure {
   align-content: flex-start;
   img,
   svg,
+  video,
   object,
   embed,
-  video,
-  iframe {
+  iframe,
+  .embed-container {
     flex: 1;
     // flex-shrink
     display: block;
     width: 100%;
 
-    // Figure with children
+    // Figure with Children
     //
     // Diptychs, triptychs, etc.
     //
@@ -79,10 +80,7 @@ figure {
     // Styleguide 1.2.
     + img,
     + svg,
-    + object,
-    + embed,
-    + video,
-    + iframe {
+    + video {
       margin-left: $fig-gutter / 3;
       @media (min-width: $fig-container * 1.1) {
         margin-left: $fig-gutter;
@@ -96,10 +94,10 @@ figure {
   border-radius: 3px;
   img,
   svg,
-  object,
-  embed,
   video,
-  iframe {
+  iframe,
+  object,
+  embed {
     border: 1px solid $fig-border-color;
   }
 }
@@ -108,10 +106,7 @@ figure {
   position: relative;
   img,
   svg,
-  object,
-  embed,
-  video,
-  iframe {
+  video {
     padding-top: 1.9em;
     background-color: darken($fig-bg-color, 10%);
     border-radius: 3px 3px;
@@ -302,6 +297,106 @@ figcaption {
         font-size: 1em;
         margin-left: 0;
       }
+    }
+  }
+}
+
+// Figure with Responsive Embeded Media
+//
+// Generic embedded media, like a YouTube video or Twitter card.
+//
+// Markup:
+// <figure class="figure--embed {$modifiers}">
+//   <div class="embed-container">
+//     <iframe src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+//   </div>
+//   <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+// </figure>
+//
+// .figure--aside                    - Embeded media that has a caption as marginalia, when possible.
+// .figure--border                   - Embeded media framed with a border.
+// .figure--breakout                 - Embeded media that visually breaks the container when there is space available.
+// .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
+// .figure--overlay                  - Embeded media with an overlayed caption.
+// .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
+// .figure--square                   - Embeded media scaled or cropped within a square. Works especially well with Vine and Instagram.
+//
+// Styleguide 1.3.
+.figure--embed {
+  position: relative;
+  display: block;
+  &.figure--border {
+    .embed-container {
+      border: 1px solid $fig-border-color;
+      iframe,
+      object,
+      embed {
+        border-width: 0;
+      }
+    }
+  }
+}
+
+// Possibly use [~instagram] kinda thing to get the numbers right
+// Basically, should be able to drop in the iframe from Embed Responsively
+// without needing the inline CSS
+.embed-container {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  iframe,
+  object,
+  embed {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: auto;
+    min-width: auto;
+    height: 100%;
+  }
+}
+
+// Figure with Square Embed
+//
+// A pre-sized embed, like an Instagram photo.
+//
+// Markup:
+// <figure class="figure--embed figure--square {$modifiers}">
+//   <div class="embed-container">
+//     <iframe src="//instagram.com/p/snOu1DSKY8/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+//   </div>
+//   <figcaption>Throwback Thursday: <cite>Napoleon Crossing the Alps</cite>.</figcaption>
+// </figure>
+//
+// .figure--aside  - A figure with the caption as marginalia when possible.
+// .figure--border - A figure with a border.
+//
+// Styleguide 1.3.1.
+.figure--square {
+  .embed-container {
+    padding-bottom: 100%;
+  }
+  iframe[src*="instagram.com/p"] {
+    // Instagram relies on cropping
+    max-width: 612px;
+  }
+  iframe[src*="vine.co"] {
+  }
+  &.figure--border.figure--embed {
+    .embed-container {
+      border-width: 0;
+      padding-bottom: calc(100% + 1px);
+      overflow: visible;
+    }
+    iframe,
+    embed,
+    object {
+      border-width: 1px;
     }
   }
 }
