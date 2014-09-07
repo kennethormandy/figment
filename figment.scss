@@ -9,7 +9,7 @@ $fig-container:    43em  !default;
 $fig-gutter:       1em   !default;
 $fig-outer:        0     !default;
 $fig-line-height:  1.5   !default;
-$fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8;
+$fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
 
 body {
   counter-reset: fig;
@@ -167,8 +167,9 @@ figure {
 // .figure--border                   - A figure framed with a border.
 // .figure--browser                  - A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
 // .figure--breakout                 - A figure that visually breaks the container when there is space available.
+// .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
 // .figure--overlay                  - An image with an optional overlayed caption.
-// .figure--breakout.figure--overlay - A combination of the breakout and overlay modules.
+// .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 //
 // Styleguide 1.1.
 
@@ -206,6 +207,34 @@ figcaption {
     @media (min-width: $fig-container * 2) {
       font-size: 1em;
     }
+  }
+  &.figure--breakout {
+    @media (min-width: $fig-container * 1.66) {
+      margin-right: 0;
+      figcaption {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: $fig-container * 2) {
+      margin-left: -$fig-col-width * 3;
+      margin-right: -$fig-col-width * 1;
+      figcaption {
+        font-size: 0.8em;
+        right: (-$fig-col-width * 3) - ($fig-gutter / 0.8);
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: $fig-container * 2.33) {
+      margin-left: -$fig-col-width * 3;
+      margin-right: -$fig-col-width * 2;
+      figcaption {
+        font-size: 1em;
+        right: (-$fig-col-width * 3) - $fig-gutter;
+      }
+    }
+
   }
 }
 
