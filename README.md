@@ -31,6 +31,8 @@ Available:
 .figure--browser  - A figure framed with browser chrome.
 .figure--breakout - A figure that visually breaks the container when there is space available.
 .figure--overlay  - An image with an optional overlayed caption.
+.figure--embed    - A figure with media embedded from another service. (ex. Vimeo, YouTube, Twitter card)
+.figure--square   - An embed cropped, scaled, or already set to a square. (ex. Instagram, Vine)
 ```
 
 Coming:
@@ -38,8 +40,7 @@ Coming:
 ```
 .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
-.figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
-.figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
+.figure--square   - Will crop anything to a square.
 ```
 
 Potential:
@@ -48,6 +49,7 @@ Potential:
 .figure--right
 .figure--left
 .figure--crop (marginal image that can acceptably bleed off the canvas)
+.figure--spread (paired? like split and breakout combined, into split image and quote or similar)
 ```
 
 ## Contributing
