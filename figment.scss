@@ -4,10 +4,12 @@
 
 $fig-numbered:     true  !default;
 $fig-border-color: #555  !default;
-$fig-bg-color:     #FFF !default;
-$fig-container:    700px !default;
+$fig-bg-color:     #FFF  !default;
+$fig-container:    43em  !default;
 $fig-gutter:       1em   !default;
-$fig-line-height:  1.5 !default;
+$fig-outer:        0     !default;
+$fig-line-height:  1.5   !default;
+$fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8;
 
 body {
   counter-reset: fig;
@@ -24,10 +26,10 @@ body {
 //
 // .figure--border   - A figure framed with a border.
 // .figure--browser  - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
+// .figure--breakout - A figure that visually breaks the container when there is space available.
 //
 // Styleguide 1.
 
-// .figure--breakout - A figure that visually breaks the container when there is space available.
 // .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 // .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 // .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
@@ -121,9 +123,34 @@ figure {
   }
 }
 
-  .figure-caption,
-  figcaption {
+.figure--breakout {
+  margin-left: -$fig-outer;
+  margin-right: -$fig-outer;
+  @media (min-width: $fig-container * 1.33) {
+    margin-left: -$fig-col-width;
+    margin-right: -$fig-col-width;
+    figcaption {
+      margin-left: $fig-col-width;
+      margin-right: $fig-col-width;
+    }
   }
+  @media (min-width: $fig-container * 1.66) {
+    margin-left: -$fig-col-width * 2;
+    margin-right: -$fig-col-width * 2;
+    figcaption {
+      margin-left: $fig-col-width * 2;
+      margin-right: $fig-col-width * 2;
+    }
+  }
+  @media (min-width: $fig-container * 2) {
+    margin-left: -$fig-col-width * 3;
+    margin-right: -$fig-col-width * 3;
+    figcaption {
+      margin-left: $fig-col-width * 3;
+      margin-right: $fig-col-width * 3;
+    }
+  }
+
 }
 
 // Figure with Caption
@@ -137,13 +164,14 @@ figure {
 //   </figcaption>
 // </figure>
 //
-// .figure--border   - A figure framed with a border.
-// .figure--browser  - A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
-// .figure--overlay  - An image with an optional overlayed caption.
+// .figure--border                   - A figure framed with a border.
+// .figure--browser                  - A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
+// .figure--breakout                 - A figure that visually breaks the container when there is space available.
+// .figure--overlay                  - An image with an optional overlayed caption.
+// .figure--breakout.figure--overlay - A combination of the breakout and overlay modules.
 //
 // Styleguide 1.1.
 
-// .figure--breakout - A figure that visually breaks the container when there is space available.
 // .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 // .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 // .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
@@ -182,6 +210,14 @@ figcaption {
       // float: left;
       background-color: rgba($fig-bg-color, 0.75);
       text-shadow: 0 0 5px $fig-bg-color;
+    }
+  }
+  &.figure--breakout {
+    figcaption {
+      @media (min-width: $fig-container * 1.33) {
+        font-size: 1em;
+        margin-left: 0;
+      }
     }
   }
 }

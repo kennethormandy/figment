@@ -28,13 +28,13 @@ Available:
 ```
 .figure--border   - A figure framed with a border.
 .figure--browser  - A figure framed with browser chrome.
+.figure--breakout - A figure that visually breaks the container when there is space available.
 .figure--overlay  - An image with an optional overlayed caption.
 ```
 
 Coming:
 
 ```
-.figure--breakout - A figure that visually breaks the container when there is space available.
 .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
