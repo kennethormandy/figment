@@ -23,7 +23,9 @@ body {
 //
 // Markup:
 // <figure class="{$modifiers}">
+//   <a href="#">
 //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//   </a>
 // </figure>
 //
 // .figure--border    - A figure framed with a border.
@@ -55,9 +57,10 @@ figure {
   // align-content: flex-start;
   img,
   svg,
+  & > a,
   video,
-  object,
   embed,
+  object,
   iframe,
   .embed-container {
     flex: 1;
