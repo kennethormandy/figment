@@ -1,7 +1,8 @@
 /*! Figment v0.5.0 • github.com/kennethormandy/figment • MIT License */
 
 // Variables
-
+//
+// No styleguide reference.
 $fig-numbered:     true  !default;
 $fig-border-color: #555  !default;
 $fig-bg-color:     #FFF  !default;
@@ -9,6 +10,7 @@ $fig-container:    43em  !default;
 $fig-gutter:       1em   !default;
 $fig-outer:        0     !default;
 $fig-line-height:  1.5   !default;
+$fig-font-size-sm: 0.8em !default;
 $fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
 
 body {
@@ -38,15 +40,19 @@ body {
 
 .figure,
 figure {
+  display: block;
+  // width: 100%;
   counter-increment: fig;
   margin-left: 0;
   margin-right: 0;
   display: block;
+  // Need to figure out how to properly unset previous flex-pectations
+  // Otherwise breaks with Neat
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  // justify-content: flex-start;
   align-items: flex-start;
-  align-content: flex-start;
+  // align-content: flex-start;
   img,
   svg,
   video,
@@ -91,7 +97,6 @@ figure {
 }
 
 .figure--border {
-  border-radius: 3px;
   img,
   svg,
   video,
@@ -109,11 +114,9 @@ figure {
   video {
     padding-top: 1.9em;
     background-color: darken($fig-bg-color, 10%);
-    border-radius: 3px 3px;
+    border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid darken($fig-bg-color, 20%);
-
-    box-sizing: border-box;
     border-top: 1px solid darken($fig-bg-color, 20%);
   }
   &:after,
@@ -162,26 +165,26 @@ figure {
 .figure--breakout {
   margin-left: -$fig-outer;
   margin-right: -$fig-outer;
-  @media (min-width: $fig-container * 1.33) {
+  @media (min-width: $fig-container * 2) {
     margin-left: -$fig-col-width;
     margin-right: -$fig-col-width;
-    figcaption {
+    > figcaption {
       margin-left: $fig-col-width;
       margin-right: $fig-col-width;
     }
   }
-  @media (min-width: $fig-container * 1.66) {
+  @media (min-width: $fig-container * 3) {
     margin-left: -$fig-col-width * 2;
     margin-right: -$fig-col-width * 2;
-    figcaption {
+    > figcaption {
       margin-left: $fig-col-width * 2;
       margin-right: $fig-col-width * 2;
     }
   }
-  @media (min-width: $fig-container * 2) {
+  @media (min-width: $fig-container * 4) {
     margin-left: -$fig-col-width * 3;
     margin-right: -$fig-col-width * 3;
-    figcaption {
+    > figcaption {
       margin-left: $fig-col-width * 3;
       margin-right: $fig-col-width * 3;
     }
@@ -231,54 +234,72 @@ figcaption {
 
 .figure--aside {
   position: relative;
-  figcaption {
-    @media (min-width: $fig-container * 1.66) {
+  > figcaption {
+    @media (min-width: $fig-container * 2.33) {
       position: absolute;
       right: (-$fig-col-width * 3) - $fig-gutter;
       top: 0;
-      font-size: 0.8em;
+      font-size: $fig-font-size-sm;
       width: $fig-col-width * 3;
-    }
-    @media (min-width: $fig-container * 2) {
-      font-size: 1em;
     }
   }
   &.figure--breakout {
-    @media (min-width: $fig-container * 1.66) {
-      margin-right: 0;
-      figcaption {
-        margin-left: 0;
-        margin-right: 0;
+    > figcaption {
+      @media (min-width: $fig-container * 2.33) {
+        position: relative;
+        right: auto;
+        top: auto;
+        font-size: inherit;
+        width: auto;
+      }
+      @media (min-width: $fig-container * 3) {
+        position: absolute;
+        right: (-$fig-col-width * 5) - $fig-gutter;
+        top: 0;
+        font-size: $fig-font-size-sm;
+        width: $fig-col-width * 3;
       }
     }
-    @media (min-width: $fig-container * 2) {
-      margin-left: -$fig-col-width * 3;
-      margin-right: -$fig-col-width * 1;
-      figcaption {
-        font-size: 0.8em;
-        right: (-$fig-col-width * 3) - ($fig-gutter / 0.8);
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-    @media (min-width: $fig-container * 2.33) {
-      margin-left: -$fig-col-width * 3;
-      margin-right: -$fig-col-width * 2;
-      figcaption {
-        font-size: 1em;
-        right: (-$fig-col-width * 3) - $fig-gutter;
-      }
-    }
-
   }
+  // PROBLEM
+  // Aside and breakout is just too large
+  // Either fix how columns are calcualted,
+  // change breakpoints, etc.
+  //
+  // &.figure--breakout {
+  //   @media (min-width: $fig-container * 1.33) {
+  //     margin-right: 0;
+  //     > figcaption {
+  //       margin-left: 0;
+  //       margin-right: 0;
+  //     }
+  //   }
+  //   @media (min-width: $fig-container * 1.66) {
+  //     margin-left: -$fig-col-width * 3;
+  //     margin-right: -$fig-col-width * 0;
+  //     > figcaption {
+  //       font-size: $fig-font-size-sm;
+  //       right: (-$fig-col-width * 3) - ($fig-gutter / 0.8);
+  //       margin-left: 0;
+  //       margin-right: 0;
+  //     }
+  //   }
+  //   @media (min-width: $fig-container * 2) {
+  //     margin-left: -$fig-col-width * 3;
+  //     margin-right: -$fig-col-width * 2;
+  //     > figcaption {
+  //       right: (-$fig-col-width * 3) - $fig-gutter;
+  //     }
+  //   }
+  // }
 }
 
 .figure--overlay {
   position: relative;
   .figure-caption,
-  figcaption {
+  > figcaption {
     @media (min-width: $fig-container * 0.75) {
-      font-size: 0.8em; // ?
+      font-size: $fig-font-size-sm; // ?
       margin-top: 0;
       margin-bottom: 0;
       position: absolute;
@@ -292,7 +313,7 @@ figcaption {
     }
   }
   &.figure--breakout {
-    figcaption {
+    > figcaption {
       @media (min-width: $fig-container * 1.33) {
         font-size: 1em;
         margin-left: 0;
