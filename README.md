@@ -40,7 +40,6 @@ Coming:
 ```
 .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
-.figure--square   - Will crop anything to a square.
 ```
 
 Potential:
