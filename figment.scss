@@ -110,6 +110,18 @@ figure {
   }
 }
 
+// Figure with URL
+//
+// Markup:
+// <!-- The figure title becomes part of the browser chrome -->
+// <figure class="figure--browser {$modifiers}" title="napoleon.club">
+//   <a href="#">
+//     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//   </a>
+//   <figcaption>The Napoleon Fan Club website.</figcaption>
+// </figure>
+//
+// Styleguide 1.2.1.
 .figure--browser {
   position: relative;
   img,
@@ -126,25 +138,30 @@ figure {
   &:before{
     box-sizing: border-box;
     position: absolute;
-
   }
   &:before{
     content: "\00B7\00B7\00B7";
     user-select: none;
+    cursor: default;
     color: darken($fig-bg-color, 20%);
     border-bottom: 1px solid darken($fig-bg-color, 20%);
     letter-spacing: -4px;
     box-sizing: border-box;
-    font-size: 4em;
+    font-size: 72px;
+    font-size: 4.5rem;
     height: 0.5em;
     width: 100%;
     line-height: 0.375;
     padding-left: 0.125em;
   }
   &:after{
-    content: attr(data-url);
+    content: attr(title);
+    user-select: none;
+    cursor: default;
     display: block;
     background: #FFF;
+    border: 1px solid darken($fig-bg-color, 20%);
+    text-align: center;
     line-height: 0.25;
     font-size: 0.6em;
     padding: 0.833333333em;
@@ -154,7 +171,6 @@ figure {
     text-align: left;
     margin-top: 0.66em;
     margin-right: 1.041666667em;
-    border: 1px solid darken($fig-bg-color, 20%);
     top: 0;
     right: 0;
     width: 80%;
