@@ -37,8 +37,6 @@ body {
 // .figure--breakout.figure--browser  - A combination of the breakout and browser modules. (needs flexbox for url box)
 // .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 // .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
-// .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
-// .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
 
 .figure,
 figure {
@@ -210,7 +208,6 @@ figure {
 // .figure--border                   - A figure framed with a border.
 // .figure--browser                  - A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
 // .figure--breakout                 - A figure that visually breaks the container when there is space available.
-// .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
 // .figure--overlay                  - An image with an optional overlayed caption.
 // .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 //
@@ -345,7 +342,6 @@ figcaption {
 // .figure--aside                    - Embeded media that has a caption as marginalia, when possible.
 // .figure--border                   - Embeded media framed with a border.
 // .figure--breakout                 - Embeded media that visually breaks the container when there is space available.
-// .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
 // .figure--overlay                  - Embeded media with an overlayed caption.
 // .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 // .figure--square                   - Embeded media scaled or cropped within a square. Works especially well with Vine and Instagram.
