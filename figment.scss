@@ -24,7 +24,7 @@ body {
 // Markup:
 // <figure class="{$modifiers}">
 //   <a href="#">
-//   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   </a>
 // </figure>
 //
@@ -43,18 +43,17 @@ body {
 .figure,
 figure {
   display: block;
-  // width: 100%;
   counter-increment: fig;
   margin-left: 0;
   margin-right: 0;
   display: block;
-  // Need to figure out how to properly unset previous flex-pectations
-  // Otherwise breaks with Neat
   display: flex;
   flex-flow: row wrap;
-  // justify-content: flex-start;
   align-items: flex-start;
-  // align-content: flex-start;
+  // Need to figure out how to properly unset previous flex-pectations
+  // Otherwise breaks with Neat
+  justify-content: space-between;
+  align-content: space-between;
   img,
   svg,
   & > a,
@@ -63,11 +62,15 @@ figure {
   object,
   iframe,
   .embed-container {
-    flex: 1;
-    // flex-shrink
     display: block;
-    width: 100%;
-
+    width: calc(50% - #{ $fig-gutter / 2 });
+    flex-basis: calc(50% - #{ $fig-gutter / 2 });
+    margin-bottom: #{ $fig-gutter };
+    &:only-of-type:first-of-type {
+      width: 100%;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
     // Figure with Children
     //
     // Diptychs, triptychs, etc.
@@ -83,19 +86,12 @@ figure {
     // .figure--aside                    - A figure with the caption as marginalia when possible.
     // .figure--border                   - A figure framed with a border.
     // .figure--breakout                 - A figure that visually breaks the container when there is space available.
-    // .figure--breakout.figure--aside   - A combination of the breakout and aside modules.
-    // .figure--breakout.figure--border   - A combination of the breakout and border modules.
+    // .figure--breakout.figure--border  - A combination of the breakout and border modules.
+    // .figure--triptych                 - Three images shown as equals
+    // .figure--triptych.figure--aside   - Three images shown as equals
+    // .figure--triptych.figure--border  - Three images shown as equals
     //
     // Styleguide 1.2.
-    + img,
-    + svg,
-    + video {
-      margin-left: $fig-gutter / 3;
-      @media (min-width: $fig-container * 1.1) {
-        margin-left: $fig-gutter;
-        margin-bottom: 1em * $fig-line-height;
-      }
-    }
   }
 }
 
@@ -358,6 +354,25 @@ figcaption {
         border-width: 0;
       }
     }
+  }
+}
+
+// Ideally, want to depricate this class
+// and have it happen automatically if
+// there are three items included rather
+// than having to explicitly declare
+// it with this class
+.figure--triptych {
+  img,
+  svg,
+  & > a,
+  video,
+  embed,
+  object,
+  iframe,
+  .embed-container {
+    width: calc(33% - #{ $fig-gutter / 3 });
+    flex-basis: calc(33% - #{ $fig-gutter / 3 });
   }
 }
 
