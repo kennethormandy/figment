@@ -52,8 +52,8 @@ figure {
   align-items: flex-start;
   // Need to figure out how to properly unset previous flex-pectations
   // Otherwise breaks with Neat
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: flex-start;
+  align-content: flex-start;
   img,
   svg,
   & > a,
@@ -63,9 +63,14 @@ figure {
   iframe,
   .embed-container {
     display: block;
-    width: calc(50% - #{ $fig-gutter / 2 });
-    flex-basis: calc(50% - #{ $fig-gutter / 2 });
+    width: calc(50% - #{ $fig-gutter });
+    flex-basis: auto;
+    flex-basis: main-size;
     margin-bottom: #{ $fig-gutter };
+    margin-right: $fig-gutter;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
     &:only-of-type:first-of-type {
       width: 100%;
       max-width: 100%;
@@ -102,6 +107,7 @@ figure {
   iframe,
   object,
   embed {
+    width: calc(50% - #{ $fig-gutter } - 2px);
     border: 1px solid $fig-border-color;
   }
 }
@@ -374,8 +380,28 @@ figcaption {
   object,
   iframe,
   .embed-container {
-    width: calc(33% - #{ $fig-gutter / 3 });
-    flex-basis: calc(33% - #{ $fig-gutter / 3 });
+    width: calc(33.33% - #{ $fig-gutter / 3 });
+    // flex-basis: calc(33.33% - #{ $fig-gutter / 3 });
+    margin-right: $fig-gutter / 3;
+    &:nth-of-type(2n) {
+      margin-right: $fig-gutter / 3;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+  &.figure--border {
+    img,
+    svg,
+    & > a,
+    video,
+    embed,
+    object,
+    iframe,
+    .embed-container {
+      width: calc(33.33% - #{ $fig-gutter / 3 } - 2px);
+      // flex-basis: calc(33.33% - #{ $fig-gutter / 3 });
+    }
   }
 }
 
