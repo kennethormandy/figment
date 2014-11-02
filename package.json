@@ -11,10 +11,10 @@
   "scripts": {
     "styleguide": "kss-node ./ examples/ --mask figment.scss --template _template/",
     "start": "npm run styleguide && harp server",
-    "compile": "harp compile",
+    "compile": "npm run styleguide && mv node_modules _node_modules && harp compile && mv _node_modules node_modules",
     "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/fig are greatly appriciated.\" && exit 1"
   },
   "devDependencies": {
-    "kss": "~1.0.0"
+    "kss": "kennethormandy/kss-node#ko-modifierMarkup"
   }
 }
