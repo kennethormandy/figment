@@ -8,6 +8,14 @@
 # Figment
 
 Editorial and catalogue-inspired `<figure>` and `<figcaption>` pairings for mobile-first layouts.
+Figment is a simple CSS framework for well-designed `<figure>` and `<figcaption>` pairings.
+
+It gives you:
+
+- Better default styling for captioned images, videos, embeds
+- A consistent, BEM-like API for specifying inline media layouts, whether you hand-code them in Markdown or use them with a CMS
+- The chance to move to site-specific styles quickly; there’s no
+- Optional configuration, so it can fit to your existing grid
 
 ## Getting started
 
