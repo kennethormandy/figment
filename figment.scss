@@ -350,7 +350,7 @@ figcaption {
 // Markup:
 // <figure class="figure--embed {$modifiers}">
 //   <div class="embed-container">
-//     <iframe src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+//     <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 //   </div>
 //   <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
 // </figure>
@@ -448,7 +448,7 @@ figcaption {
 // Markup:
 // <figure class="figure--embed figure--square {$modifiers}">
 //   <div class="embed-container">
-//     <iframe src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+//     <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 //   </div>
 //   <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
 // </figure>
