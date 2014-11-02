@@ -41,7 +41,6 @@ body {
 .figure,
 figure {
   display: block;
-  counter-increment: fig;
   margin-left: 0;
   margin-right: 0;
   display: block;
@@ -52,6 +51,27 @@ figure {
   // Otherwise breaks with Neat
   justify-content: flex-start;
   align-content: flex-start;
+  // Figure with Children
+  //
+  // Diptychs, triptychs, etc.
+  //
+  // Markup:
+  // <figure class="{$modifiers}">
+  //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  //   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+  // </figure>
+  //
+  // .figure--aside                    - A figure with the caption as marginalia when possible.
+  // .figure--border                   - A figure framed with a border.
+  // .figure--breakout                 - A figure that visually breaks the container when there is space available.
+  // .figure--breakout.figure--border  - A combination of the breakout and border modules.
+  // .figure--triptych                 - Three images shown as equals
+  // .figure--triptych.figure--aside   - Three images shown as equals
+  // .figure--triptych.figure--border  - Three images shown as equals
+  //
+  // Styleguide 1.2.
   img,
   svg,
   & > a,
@@ -74,27 +94,27 @@ figure {
       max-width: 100%;
       flex-basis: 100%;
     }
-    // Figure with Children
-    //
-    // Diptychs, triptychs, etc.
-    //
-    // Markup:
-    // <figure class="{$modifiers}">
-    //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-    //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-    //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-    //   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-    // </figure>
-    //
-    // .figure--aside                    - A figure with the caption as marginalia when possible.
-    // .figure--border                   - A figure framed with a border.
-    // .figure--breakout                 - A figure that visually breaks the container when there is space available.
-    // .figure--breakout.figure--border  - A combination of the breakout and border modules.
-    // .figure--triptych                 - Three images shown as equals
-    // .figure--triptych.figure--aside   - Three images shown as equals
-    // .figure--triptych.figure--border  - Three images shown as equals
-    //
-    // Styleguide 1.2.
+  }
+  // Figure counters
+  //
+  // No styleguide reference.
+  img,
+  svg,
+  video,
+  embed,
+  object,
+  iframe {
+    counter-increment: fig;
+  }
+  a {
+    & > img,
+    & > svg,
+    & > video,
+    & > embed,
+    & > object,
+    & > iframe {
+      counter-increment: fig;
+    }
   }
 }
 
@@ -121,7 +141,7 @@ figure {
 //   <figcaption>The Napoleon Fan Club website.</figcaption>
 // </figure>
 //
-// Styleguide 1.2.1.
+// Styleguide 1.2.2.
 .figure--browser {
   position: relative;
   img,
@@ -187,7 +207,7 @@ figure {
   @media (min-width: $fig-container * 2) {
     margin-left: -$fig-col-width;
     margin-right: -$fig-col-width;
-    > figcaption {
+    > figcaption:only-of-type {
       margin-left: $fig-col-width;
       margin-right: $fig-col-width;
     }
@@ -195,7 +215,7 @@ figure {
   @media (min-width: $fig-container * 3) {
     margin-left: -$fig-col-width * 2;
     margin-right: -$fig-col-width * 2;
-    > figcaption {
+    > figcaption:only-of-type {
       margin-left: $fig-col-width * 2;
       margin-right: $fig-col-width * 2;
     }
@@ -203,7 +223,7 @@ figure {
   @media (min-width: $fig-container * 4) {
     margin-left: -$fig-col-width * 3;
     margin-right: -$fig-col-width * 3;
-    > figcaption {
+    > figcaption:only-of-type {
       margin-left: $fig-col-width * 3;
       margin-right: $fig-col-width * 3;
     }
@@ -240,8 +260,35 @@ figcaption {
   margin-top: 1em * ($fig-line-height / 3);
   margin-bottom: 1em * $fig-line-height;
   width: 100%;
-  flex: 1 1 100%;
-  align-self: flex-end;
+  // Figure with children and corresponding captions
+  //
+  // A grid of photos with an individual caption to match each. Unfortunately these have to be ordered strangely right now.
+  //
+  // Markup:
+  // <figure class="{$modifiers}">
+  //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  //   <figcaption>The first Versailles version of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>.</figcaption>
+  //   <figcaption>The second Versailles version.</figcaption>
+  //   <img src="public/images/example-3.jpg" alt="Napoleon Crossing the Alps (double check version)" />
+  //   <img src="public/images/example-4.jpg" alt="Napoleon Crossing the Alps (double check version)" />
+  //   <figcaption>The (double check) version.</figcaption>
+  //   <figcaption>The (double check) version.</figcaption>
+  //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  //   <figcaption>The Belvedere version.</figcaption>
+  // </figure>
+  //
+  // .figure--border                   - A figure framed with a border.
+  // .figure--breakout                 - A figure that visually breaks the container when there is space available.
+  // .figure--breakout.figure--border  - A combination of the breakout and border modules.
+  //
+  // Styleguide 1.2.1.
+  flex: 1 1 50%;
+  align-self: flex-start; // Could make this configurable, align to top or bottom (maybe just better to give examples of how to theme it)
+  &:last-of-type {
+    flex: 1 1 100%;
+  }
+
   @if $fig-numbered == true {
     &:before {
       content: "Fig. " counter(fig) " ";
