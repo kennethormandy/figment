@@ -127,12 +127,10 @@ figure {
   img,
   svg,
   video {
-    padding-top: 1.9em;
-    background-color: darken($fig-bg-color, 10%);
+    font-size: 1rem;
+    padding-top: 2.25em;
     border-radius: 3px;
     box-sizing: border-box;
-    border: 1px solid darken($fig-bg-color, 20%);
-    border-top: 1px solid darken($fig-bg-color, 20%);
   }
   &:after,
   &:before{
@@ -145,6 +143,7 @@ figure {
     cursor: default;
     color: darken($fig-bg-color, 20%);
     border-bottom: 1px solid darken($fig-bg-color, 20%);
+    border-radius: 3px 3px 0 0;
     letter-spacing: -4px;
     box-sizing: border-box;
     font-size: 72px;
