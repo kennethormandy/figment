@@ -69,8 +69,8 @@ figure {
     width: calc(50% - #{ $fig-gutter });
     flex-basis: auto;
     flex-basis: main-size;
-    margin-bottom: #{ $fig-gutter };
-    margin-right: $fig-gutter;
+    margin-bottom: $fig-gutter; // For dyptics, tryptics
+    margin-right: $fig-gutter;       // “”
     &:nth-child(2n) {
       margin-right: 0;
     }
@@ -78,6 +78,8 @@ figure {
       width: 100%;
       max-width: 100%;
       flex-basis: 100%;
+      margin-bottom: 0;
+      margin-right: 0
     }
     // Figure with Children
     //
