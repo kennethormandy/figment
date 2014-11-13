@@ -3,15 +3,20 @@
 // Variables
 //
 // No styleguide reference.
-$fig-numbered:     true  !default;
-$fig-border-color: #555  !default;
-$fig-bg-color:     #FFF  !default;
-$fig-container:    43em  !default;
-$fig-gutter:       1em   !default;
-$fig-outer:        0     !default;
-$fig-line-height:  1.5   !default;
-$fig-font-size-sm: 0.8em !default;
+$fig-numbered:     true             !default;
+$fig-border-color: #555             !default;
+$fig-bg-color:     rgba(#FFF, 0.75) !default;
+$fig-container:    43em             !default;
+$fig-gutter:       1em              !default;
+$fig-outer:        0                !default;
+$fig-line-height:  1.5              !default;
+$fig-font-size-sm: 0.8em            !default;
 $fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
+@if($fig-bg-color != "transparent" and $fig-bg-color != "none") {
+  $fig-browser-color: opacify($fig-bg-color, 1.0);
+} @else {
+  $fig-browser-color: #FFF !default;
+}
 
 body {
   counter-reset: fig;
@@ -141,9 +146,11 @@ figure {
     content: "\00B7\00B7\00B7";
     user-select: none;
     cursor: default;
-    color: darken($fig-bg-color, 20%);
-    border-bottom: 1px solid darken($fig-bg-color, 20%);
+    color: darken($fig-browser-color, 20%);
+    background-color: darken($fig-browser-color, 10%);
+    border: 1px solid darken($fig-browser-color, 20%);
     border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid darken($fig-browser-color, 20%);
     letter-spacing: -4px;
     box-sizing: border-box;
     font-size: 72px;
@@ -159,14 +166,14 @@ figure {
     cursor: default;
     display: block;
     background: #FFF;
-    border: 1px solid darken($fig-bg-color, 20%);
+    border: 1px solid darken($fig-browser-color, 20%);
     text-align: center;
     line-height: 0.25;
     font-size: 0.6em;
     padding: 0.833333333em;
     height: 2.075em;
     font-family: "Verdana", sans-serif;
-    color: darken($fig-bg-color, 25%);
+    color: darken($fig-browser-color, 25%);
     text-align: left;
     margin-top: 0.66em;
     margin-right: 1.041666667em;
@@ -328,8 +335,12 @@ figcaption {
       padding: $fig-gutter;
       max-width: $fig-container / 3;
       // float: left;
-      background-color: rgba($fig-bg-color, 0.75);
-      text-shadow: 0 0 5px $fig-bg-color;
+      background-color: $fig-bg-color;
+      @if($fig-bg-color == "transparent") {
+        text-shadow: 0 0 5px rgba(#FFF, 0.5);
+      } @else {
+        text-shadow: 0 0 5px opacify($fig-bg-color, 1.0);
+      }
     }
   }
   &.figure--breakout {
