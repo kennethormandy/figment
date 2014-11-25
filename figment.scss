@@ -57,6 +57,9 @@ figure {
   // Otherwise breaks with Neat
   justify-content: flex-start;
   align-content: flex-start;
+  iframe {
+    border: 0;
+  }
   img,
   svg,
   & > a,
