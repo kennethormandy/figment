@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="kss-node" />
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/style.css">
+  <!-- <link rel="stylesheet" href="public/style.css"> -->
   <link rel="stylesheet" href="/figment.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
       <aside>
         <nav>
           <ul>
-            {{#eachSection rootNumber}}
+            {{#eachSection rootName}}
               <li><a href="#section-{{ reference }}"><code>{{ reference }}</code> {{ header }}</a></li>
             {{/eachSection}}
           </ul>
@@ -42,9 +42,9 @@
           the "#ifDepth 1" block as seen below.
         }}
 
-        {{#eachSection rootNumber}}
+        {{#eachSection rootName}}
           {{#unlessDepth 1}}
-          <section class="kss-depth-{{ refDepth }}" id="section-{{ reference }}">
+          <section class="kss-depth-{{ depth }}" id="section-{{ reference }}">
           {{/unlessDepth}}
 
           <h1 class="kss-title"><span class="kss-ref">{{ reference }}{{#ifDepth 1}}.0{{/ifDepth}}</span> - {{ header }}</h1>
@@ -61,27 +61,27 @@
                   <!-- <p class="kss-mod-desc"></p> -->
                 </header>
                 <div class="kss-mod-example">
-                  {{{modifierMarkup}}}
+                  {{{markup}}}
                 </div>
                 <pre class="kss-markup language-markup">
                   <code>{{markup}}</code>
                 </pre>
               </li>
-            {{#eachModifier}}
-              <li>
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">{{name}}</h3>
-                  <p class="kss-mod-desc">{{{description}}}</p>
-                </header>
-                <div class="kss-mod-example">
-                  {{{modifierMarkup}}}
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>{{modifierMarkup}}</code>
-                </pre>
-              </li>
-            {{/eachModifier}}
-          </ol>
+              {{#eachModifier}}
+                <li>
+                  <header class="kss-mod-desc-group">
+                    <h3 class="kss-mod-name">{{name}}</h3>
+                    <p class="kss-mod-desc">{{{description}}}</p>
+                  </header>
+                  <div class="kss-mod-example">
+                    {{{markup}}}
+                  </div>
+                  <pre class="kss-markup language-markup">
+                    <code>{{markup}}</code>
+                  </pre>
+                </li>
+              {{/eachModifier}}
+            </ol>
           {{/if}}
 
           {{#unlessDepth 1}}

@@ -15,6 +15,6 @@
     "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/fig are greatly appriciated.\" && exit 1"
   },
   "devDependencies": {
-    "kss": "kennethormandy/kss-node#ko-modifierMarkup"
+    "kss": "^2.0.0-alpha.4"
   }
 }

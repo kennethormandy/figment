@@ -27,7 +27,7 @@ body {
 // Media referenced within set text.
 //
 // Markup:
-// <figure class="{$modifiers}">
+// <figure class="{{modifier_class}}">
 //   <a href="#">
 //     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   </a>
@@ -89,7 +89,7 @@ figure {
     // Diptychs, triptychs, etc.
     //
     // Markup:
-    // <figure class="{$modifiers}">
+    // <figure class="{{modifier_class}}">
     //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
     //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
     //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
@@ -124,7 +124,7 @@ figure {
 //
 // Markup:
 // <!-- The figure title becomes part of the browser chrome -->
-// <figure class="figure--browser {$modifiers}" title="napoleon.club">
+// <figure class="figure--browser {{modifier_class}}" title="napoleon.club">
 //   <a href="#">
 //     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   </a>
@@ -226,7 +226,7 @@ figure {
 // Descriptions of figures.
 //
 // Markup:
-// <figure class="{$modifiers}">
+// <figure class="{{modifier_class}}">
 //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 // </figure>
@@ -363,7 +363,7 @@ figcaption {
 // Generic embedded media, like a YouTube video or Twitter card.
 //
 // Markup:
-// <figure class="figure--embed {$modifiers}">
+// <figure class="figure--embed {{modifier_class}}">
 //   <div class="embed-container">
 //     <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 //   </div>
@@ -461,7 +461,7 @@ figcaption {
 // A pre-sized embed, like an Instagram photo.
 //
 // Markup:
-// <figure class="figure--embed figure--square {$modifiers}">
+// <figure class="figure--embed figure--square {{modifier_class}}">
 //   <div class="embed-container">
 //     <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 //   </div>
