@@ -138,11 +138,12 @@ figure {
   svg,
   video,
   iframe {
-    font-size: 1rem;
-    padding-top: 2.25em;
+    font-size: 1em;
+    padding-top: 2em;
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid darken($fig-browser-color, 20%);
+    border-width: 0 1px 1px 1px;
   }
   &:after,
   &:before{
