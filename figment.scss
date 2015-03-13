@@ -253,6 +253,7 @@ figcaption {
   width: 100%;
   flex: 1 1 100%;
   align-self: flex-end;
+  line-height: $fig-line-height;
   @if $fig-numbered == true {
     &:before {
       content: "Fig. " counter(fig) " ";
