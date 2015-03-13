@@ -136,11 +136,13 @@ figure {
   position: relative;
   img,
   svg,
-  video {
+  video,
+  iframe {
     font-size: 1rem;
     padding-top: 2.25em;
     border-radius: 3px;
     box-sizing: border-box;
+    border: 1px solid darken($fig-browser-color, 20%);
   }
   &:after,
   &:before{
@@ -150,6 +152,7 @@ figure {
   &:before{
     content: "\00B7\00B7\00B7";
     user-select: none;
+    speak: none;
     cursor: default;
     color: darken($fig-browser-color, 20%);
     background-color: darken($fig-browser-color, 10%);
@@ -158,11 +161,11 @@ figure {
     border-bottom: 1px solid darken($fig-browser-color, 20%);
     letter-spacing: -4px;
     box-sizing: border-box;
-    font-size: 72px;
-    font-size: 4.5rem;
+    // font-size: 72px;
+    font-size: 4em;
     height: 0.5em;
     width: 100%;
-    line-height: 0.375;
+    line-height: 0.5;
     padding-left: 0.125em;
   }
   &:after{
@@ -184,10 +187,10 @@ figure {
     margin-right: 1.041666667em;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 70%;
     border-radius: 1px;
     @media (min-width: $fig-container * 0.75) {
-      width: 88%; // Could use flexbox instead
+      width: 80%; // Could use flexbox instead
     }
   }
 }
