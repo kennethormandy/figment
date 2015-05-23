@@ -283,7 +283,9 @@ figcaption {
   }
 }
 
-.figure--aside {
+.figure--aside,
+figure.figure--aside, // For specificity
+.figure.figure--aside {
   position: relative;
   > figcaption {
     @media (min-width: $fig-container * 2.33) {
