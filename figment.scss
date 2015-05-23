@@ -118,10 +118,14 @@ figure {
   iframe,
   object,
   embed {
-    width: calc(50% - #{ $fig-gutter } - 2px);
+    width: calc(50% - #{ $fig-gutter / 2 } - 4px);
     border: 1px solid $fig-border-color;
+    &:only-of-type:first-of-type {
+      width: calc(100% - 2px);
+    }
   }
 }
+
 
 // Figure with URL
 //
@@ -434,7 +438,7 @@ figcaption {
     object,
     iframe,
     .embed-container {
-      width: calc(33.33% - #{ $fig-gutter / 3 } - 2px);
+      width: calc(33.33% - #{ $fig-gutter / 3 } - 6px);
       // flex-basis: calc(33.33% - #{ $fig-gutter / 3 });
     }
   }
