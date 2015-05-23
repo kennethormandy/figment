@@ -72,20 +72,13 @@ figure {
   iframe,
   .embed-container {
     display: block;
-    width: calc(50% - #{ $fig-gutter });
     flex-basis: auto;
     flex-basis: main-size;
-    margin-bottom: $fig-gutter; // For dyptics, tryptics
-    margin-right: $fig-gutter;       // “”
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-    &:only-of-type:first-of-type {
-      width: 100%;
-      max-width: 100%;
-      flex-basis: 100%;
-      margin-bottom: 0;
-      margin-right: 0
+    width: calc(50% - #{ $fig-gutter / 2 }); // For dyptics
+    margin-top: $fig-gutter;                 // “”
+    margin-right: $fig-gutter / 2;           // “”
+    @media (min-width: $fig-container * 2.33) {
+      margin-right: $fig-gutter;
     }
 
 
@@ -110,6 +103,22 @@ figure {
     // .figure--triptych.figure--border  - Three images shown as equals
     //
     // Styleguide: figment.children
+    &:first-child {
+      margin-top: 0;
+    }
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:only-of-type:first-of-type {
+      width: 100%;
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-top: 0;
+      margin-right: 0
+    }
   }
 }
 
@@ -258,7 +267,7 @@ figure {
 figcaption {
   display: block;
   margin-top: 1em * ($fig-line-height / 3);
-  margin-bottom: 1em * $fig-line-height;
+  margin-bottom: -1em * ($fig-line-height / 3);
   width: 100%;
   flex: 1 1 100%;
   align-self: flex-end;
