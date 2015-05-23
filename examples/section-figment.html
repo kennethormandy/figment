@@ -79,6 +79,9 @@
 
       <div class="kss-description">
         <p>Media referenced within set text.</p>
+<p>.figure--border    - A figure framed with a border.
+.figure--browser   - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
+.figure--breakout  - A figure that visually breaks the container when there is space available.</p>
 
       </div>
     </div>
@@ -93,46 +96,46 @@
         <div class="kss-modifier__example">
           <figure class="[modifier class]">
   <a href="#">
-    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   </a>
 </figure>
         </div>
         <div class="kss-modifier__name kss-style">
-          .figure--border
+          TODO .figure--breakout.figure--browser
         </div>
         <div class="kss-modifier__description kss-style">
-          A figure framed with a border.
+          A combination of the breakout and browser modules. (needs flexbox for url box)
         </div>
         <div class="kss-modifier__example">
-          <figure class="figure--border">
+          <figure class="TODO">
   <a href="#">
-    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   </a>
 </figure>
         </div>
         <div class="kss-modifier__name kss-style">
-          .figure--browser
+          TODO .figure--crop
         </div>
         <div class="kss-modifier__description kss-style">
-          A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
+          A figure that can be cropped acceptably at smaller screen sizes.
         </div>
         <div class="kss-modifier__example">
-          <figure class="figure--browser">
+          <figure class="TODO">
   <a href="#">
-    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   </a>
 </figure>
         </div>
         <div class="kss-modifier__name kss-style">
-          .figure--breakout
+          TODO .figure--device
         </div>
         <div class="kss-modifier__description kss-style">
-          A figure that visually breaks the container when there is space available.
+          A figure framed with a mobile device. (Undecided how to specfiy a device.)
         </div>
         <div class="kss-modifier__example">
-          <figure class="figure--breakout">
+          <figure class="TODO">
   <a href="#">
-    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   </a>
 </figure>
         </div>
@@ -141,7 +144,7 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+    &lt;img src=&quot;http://figment.kennethormandy.com/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
   &lt;/a&gt;
 &lt;/figure&gt;</code></pre>
       </div>
@@ -178,7 +181,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="[modifier class]">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -190,7 +193,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--aside">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -202,7 +205,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--border">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -214,7 +217,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--browser">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -226,7 +229,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--breakout">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -238,7 +241,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--overlay">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -250,7 +253,7 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--overlay figure--breakout">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 </figure>
         </div>
@@ -258,7 +261,7 @@
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
-  &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+  &lt;img src=&quot;http://figment.kennethormandy.com/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
   &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
       </div>
@@ -295,9 +298,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="[modifier class]">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -309,9 +312,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--aside">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -323,9 +326,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--border">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -337,9 +340,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--breakout">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -351,9 +354,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--breakout figure--border">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -365,9 +368,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--triptych">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -379,9 +382,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--triptych figure--aside">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -393,9 +396,9 @@
         </div>
         <div class="kss-modifier__example">
           <figure class="figure--triptych figure--border">
-  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <img src="http://figment.kennethormandy.com/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="http://figment.kennethormandy.com/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="http://figment.kennethormandy.com/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
 </figure>
         </div>
@@ -403,9 +406,9 @@
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
-  &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
+  &lt;img src=&quot;http://figment.kennethormandy.com/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+  &lt;img src=&quot;http://figment.kennethormandy.com/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
+  &lt;img src=&quot;http://figment.kennethormandy.com/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
   &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
       </div>
