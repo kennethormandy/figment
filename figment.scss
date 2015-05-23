@@ -39,10 +39,7 @@ $fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
 // .figure--border    - A figure framed with a border.
 // .figure--browser   - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
 // .figure--breakout  - A figure that visually breaks the container when there is space available.
-//
-// TODO .figure--breakout.figure--browser  - A combination of the breakout and browser modules. (needs flexbox for url box)
-// TODO .figure--crop                      - A figure that can be cropped acceptably at smaller screen sizes.
-// TODO .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
+// .figure--breakout.figure--browser  - A combination of the breakout and browser modules.
 //
 // Styleguide: figment
 
