@@ -67,4 +67,4 @@ Thanks for considering contributing! Everything in `example/` is currently gener
 
 [The MIT License (MIT)](LICENSE.md)
 
-Copyright © 2014 [Kenneth Ormandy](http://kennethormandy.com) & [Chloi Inc.](http://chloi.io)
+Copyright © 2014–2015 [Kenneth Ormandy](http://kennethormandy.com) & [Chloi Inc.](http://chloi.io)
