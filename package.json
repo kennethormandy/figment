@@ -13,9 +13,9 @@
     "copy": "cp figment.scss ./examples/",
     "styleguide": "npm run clean && kss-node ./ examples/ --mask --css /figment.css --mask figment.scss --homepage ./README.md && npm run copy",
     "start": "npm run styleguide && harp server examples",
-    "compile": "npm run styleguide && mv node_modules _node_modules && harp compile && mv _node_modules node_modules",
+    "compile": "harp compile examples/ ./www",
     "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/figment are greatly appriciated.\" && exit 1",
-    "deploy": "surge ./examples figment.kennethormandy.com"
+    "deploy": "npm run styleguide && npm run compile && surge ./www figment.kennethormandy.com"
   },
   "devDependencies": {
     "harp": "^0.17.0",
