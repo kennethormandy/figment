@@ -37,7 +37,7 @@ body {
 // .figure--browser   - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
 // .figure--breakout  - A figure that visually breaks the container when there is space available.
 //
-// Styleguide 1.
+// Styleguide: figment
 
 // .figure--breakout.figure--browser  - A combination of the breakout and browser modules. (needs flexbox for url box)
 // .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
@@ -104,7 +104,7 @@ figure {
     // .figure--triptych.figure--aside   - Three images shown as equals
     // .figure--triptych.figure--border  - Three images shown as equals
     //
-    // Styleguide 1.2.
+    // Styleguide: figment.children
   }
 }
 
@@ -242,7 +242,7 @@ figure {
 // .figure--overlay                  - An image with an optional overlayed caption.
 // .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 //
-// Styleguide 1.1.
+// Styleguide: figment.caption
 
 // .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
 // .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
@@ -382,7 +382,7 @@ figcaption {
 // .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 // .figure--square                   - Embeded media scaled or cropped within a square. Works especially well with Vine and Instagram.
 //
-// Styleguide 1.3.
+// Styleguide: figment.embed
 .figure--embed {
   position: relative;
   display: block;
@@ -476,7 +476,7 @@ figcaption {
 // .figure--aside  - A figure with the caption as marginalia when possible.
 // .figure--border - A figure with a border.
 //
-// Styleguide 1.3.1.
+// Styleguide: figment.embed.square
 .figure--square {
   .embed-container {
     padding-bottom: 100%;
