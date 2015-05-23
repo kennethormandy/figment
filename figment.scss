@@ -287,7 +287,8 @@ figcaption {
 figure.figure--aside, // For specificity
 .figure.figure--aside {
   position: relative;
-  > figcaption {
+  > figcaption,
+  .figure-caption {
     @media (min-width: $fig-container * 2.33) {
       position: absolute;
       right: (-$fig-col-width * 3) - $fig-gutter;
@@ -297,7 +298,8 @@ figure.figure--aside, // For specificity
     }
   }
   &.figure--breakout {
-    > figcaption {
+    > figcaption,
+    .figure-caption {
       @media (min-width: $fig-container * 2.33) {
         position: relative;
         right: auto;
