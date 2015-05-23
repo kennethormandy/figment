@@ -1,37 +1,109 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Figment – CSS defaults for figure and figcaption</title>
-  <meta name="description" content="Editorial figure and caption pairings for mobile-first layouts.">
-  <meta name="author" content="Kenneth Ormandy">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="kss-node" />
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
   <link rel="stylesheet" href="public/kss.css">
-  <!-- <link rel="stylesheet" href="public/style.css"> -->
   <link rel="stylesheet" href="/figment.css">
+
 </head>
-<body>
-  <div class="kss-wrapper">
-    <div class="kss-nav">
-      <header class="kss-header">
-        <h1>Examples</h1>
-      </header>
-      <aside>
-        <nav>
-          <ul>
-          </ul>
-        </nav>
-      </aside>
-    </div>
-    <div role="main" id="kss-main">
-      <article class="kss-content">
-         
+<body id="kss-node">
 
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-figment.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Figure</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+     <!--
+[![A great header image you designed, or collaborated on with a designer you work with. It’ll look best when it’s 728px wide, @2x for hi-dpi devices.](preview.png)](https://github.com/kennethormandy/default)
 
-      </article>
-    </div>
+***
+
+-->
+<h1 id="figment">Figment</h1>
+<p>Editorial and catalogue-inspired <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> pairings for mobile-first layouts.
+Figment is a simple CSS framework for well-designed <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> pairings.</p>
+<p>It gives you:</p>
+<ul>
+<li>Better default styling for captioned images, videos, embeds</li>
+<li>A consistent, BEM-like API for specifying inline media layouts, whether you hand-code them in Markdown or use them with a CMS</li>
+<li>The chance to move to site-specific styles quickly; there’s no</li>
+<li>Optional configuration, so it can fit to your existing grid</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>To run the project locally, clone it and then move into that directory:</p>
+<pre><code class="lang-sh">git clone http://github.com/kennethormandy/figment
+cd figment
+</code></pre>
+<p>Next, install the development dependencies using <a href="https://npmjs.org">npm</a>:</p>
+<pre><code class="lang-sh">npm install
+</code></pre>
+<p>Finally, run the project:</p>
+<pre><code class="lang-sh">npm start
+</code></pre>
+<p>How, <a href="http://harpjs.com">Harp</a> is serving it locally for you at <a href="http://localhost:9000">localhost:9000</a>.</p>
+<h2 id="api">API</h2>
+<p>Available:</p>
+<pre><code>.figure--aside    - A figure with the caption as marginalia when possible.
+.figure--border   - A figure framed with a border.
+.figure--browser  - A figure framed with browser chrome.
+.figure--breakout - A figure that visually breaks the container when there is space available.
+.figure--overlay  - An image with an optional overlayed caption.
+.figure--embed    - A figure with media embedded from another service. (ex. Vimeo, YouTube, Twitter card)
+.figure--square   - An embed cropped, scaled, or already set to a square. (ex. Instagram, Vine)
+</code></pre><p>Coming:</p>
+<pre><code>.figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
+.figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
+</code></pre><p>Potential:</p>
+<pre><code>.figure--right
+.figure--left
+.figure--crop (marginal image that can acceptably bleed off the canvas)
+.figure--spread (paired? like split and breakout combined, into split image and quote or similar)
+</code></pre><h2 id="contributing">Contributing</h2>
+<p>Thanks for considering contributing! Everything in <code>example/</code> is currently generated. There’s more information about how to <a href="CONTRIBUTING.md">get started here</a>.</p>
+<h2 id="license">License</h2>
+<p><a href="LICENSE.md">The MIT License (MIT)</a></p>
+<p>Copyright © 2014–2015 <a href="http://kennethormandy.com">Kenneth Ormandy</a> &amp; <a href="http://chloi.io">Chloi Inc.</a></p>
+
   </div>
-<script src="public/prism.js"></script>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

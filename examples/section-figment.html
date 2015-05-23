@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="/figment.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-figment.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Figure</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-figment.html#kssref-figment-caption">
+                <span class="kss-nav__ref">2.1</span
+                ><span class="kss-nav__name">Figure with Caption</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-figment.html#kssref-figment-children">
+                <span class="kss-nav__ref">2.2</span
+                ><span class="kss-nav__name">Figure with Children</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-figment.html#kssref-figment-embed">
+                <span class="kss-nav__ref">2.3</span
+                ><span class="kss-nav__name">Figure with Responsive Embeded Media</span>
+              </a>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div     id="kssref-figment" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-figment">
+          <span class="kss-title__ref">
+              2
+            <span class="kss-title__permalink-hash">
+                #figment
+            </span>
+          </span>
+          Figure
+        </a>
+      </h1>
+
+
+      <div class="kss-description">
+        <p>Media referenced within set text.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="[modifier class]">
+  <a href="#">
+    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  </a>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure framed with a border.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--border">
+  <a href="#">
+    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  </a>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--browser
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--browser">
+  <a href="#">
+    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  </a>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure that visually breaks the container when there is space available.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--breakout">
+  <a href="#">
+    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  </a>
+</figure>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;
+    &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+
+      </div>
+      <section id="kssref-figment-caption" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-figment-caption">
+          <span class="kss-title__ref">
+              2.1
+            <span class="kss-title__permalink-hash">
+                #figment.caption
+            </span>
+          </span>
+          Figure with Caption
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Descriptions of figures.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="[modifier class]">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--aside
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure with the caption as marginalia when possible.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--aside">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure framed with a border.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--border">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--browser
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure framed with browser chrome. (Should respond to vertical media queries to change device.)
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--browser">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure that visually breaks the container when there is space available.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--breakout">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--overlay
+        </div>
+        <div class="kss-modifier__description kss-style">
+          An image with an optional overlayed caption.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--overlay">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--overlay.figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A combination of the breakout and overlay modules.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--overlay figure--breakout">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
+</figure>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
+  &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-figment-children" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-figment-children">
+          <span class="kss-title__ref">
+              2.2
+            <span class="kss-title__permalink-hash">
+                #figment.children
+            </span>
+          </span>
+          Figure with Children
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Diptychs, triptychs, etc.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="[modifier class]">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--aside
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure with the caption as marginalia when possible.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--aside">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure framed with a border.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--border">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure that visually breaks the container when there is space available.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--breakout">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--breakout.figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A combination of the breakout and border modules.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--breakout figure--border">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--triptych
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Three images shown as equals
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--triptych">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--triptych.figure--aside
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Three images shown as equals
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--triptych figure--aside">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--triptych.figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Three images shown as equals
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--triptych figure--border">
+  <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+  <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+  <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
+</figure>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;[modifier class]&quot;&gt;
+  &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+  &lt;img src=&quot;images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
+  &lt;img src=&quot;images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
+  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-figment-embed" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-figment-embed">
+          <span class="kss-title__ref">
+              2.3
+            <span class="kss-title__permalink-hash">
+                #figment.embed
+            </span>
+          </span>
+          Figure with Responsive Embeded Media
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Generic embedded media, like a YouTube video or Twitter card.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed [modifier class]">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--aside
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Embeded media that has a caption as marginalia, when possible.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--aside">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Embeded media framed with a border.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--border">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Embeded media that visually breaks the container when there is space available.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--breakout">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--overlay
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Embeded media with an overlayed caption.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--overlay">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--overlay.figure--breakout
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A combination of the breakout and overlay modules.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--overlay figure--breakout">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--square
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Embeded media scaled or cropped within a square. Works especially well with Vine and Instagram.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--square">
+  <div class="embed-container">
+    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
+</figure>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;figure--embed [modifier class]&quot;&gt;
+  &lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-figment-embed.square" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-figment-embed.square">
+          <span class="kss-title__ref">
+              2.3.1
+            <span class="kss-title__permalink-hash">
+                #figment.embed.square
+            </span>
+          </span>
+          Figure with Square Embed
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>A pre-sized embed, like an Instagram photo.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--square [modifier class]">
+  <div class="embed-container">
+    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  </div>
+  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--aside
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure with the caption as marginalia when possible.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--square figure--aside">
+  <div class="embed-container">
+    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  </div>
+  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
+</figure>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .figure--border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A figure with a border.
+        </div>
+        <div class="kss-modifier__example">
+          <figure class="figure--embed figure--square figure--border">
+  <div class="embed-container">
+    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  </div>
+  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
+</figure>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;figure class=&quot;figure--embed figure--square [modifier class]&quot;&gt;
+  &lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe async defer src=&quot;//instagram.com/p/kz8ibZkn0C/embed/&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;A contemporary, Kurdish version of &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, seen on the streets of Arbil.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

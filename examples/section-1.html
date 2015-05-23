@@ -1,754 +1,101 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Figment – CSS defaults for figure and figcaption</title>
-  <meta name="description" content="Editorial figure and caption pairings for mobile-first layouts.">
-  <meta name="author" content="Kenneth Ormandy">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="kss-node" />
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
   <link rel="stylesheet" href="public/kss.css">
-  <!-- <link rel="stylesheet" href="public/style.css"> -->
   <link rel="stylesheet" href="/figment.css">
+
 </head>
-<body>
-  <div class="kss-wrapper">
-    <div class="kss-nav">
-      <header class="kss-header">
-        <h1>Examples</h1>
-      </header>
-      <aside>
-        <nav>
-          <ul>
-              <li><a href="#section-1"><code>1</code> Figure</a></li>
-              <li><a href="#section-1.1"><code>1.1</code> Figure with Caption</a></li>
-              <li><a href="#section-1.2"><code>1.2</code> Figure with Children</a></li>
-              <li><a href="#section-1.2.1"><code>1.2.1</code> Figure with URL</a></li>
-              <li><a href="#section-1.3"><code>1.3</code> Figure with Responsive Embeded Media</a></li>
-              <li><a href="#section-1.3.1"><code>1.3.1</code> Figure with Square Embed</a></li>
-          </ul>
-        </nav>
-      </aside>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-figment.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Figure</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <section id="kssref-1-2.1" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-1-2.1">
+          <span class="kss-title__ref">
+              1.2.1
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Figure with URL
+        </a>
+      </h3>
+
+
     </div>
-    <div role="main" id="kss-main">
-      <article class="kss-content">
 
-
-
-          <h1 class="kss-title"><span class="kss-ref">1.0</span> - Figure</h1>
-
-            <div class="kss-box"><p>Media referenced within set text.</p>
-</div>
-
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <figure class="">
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <!-- The figure title becomes part of the browser chrome -->
+<figure class="figure--browser [modifier class]" title="napoleon.club">
   <a href="#">
-    <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  </a>
-</figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;figure class=&quot;&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;/a&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--border</h3>
-                    <p class="kss-mod-desc"><p>A figure framed with a border.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--border">
-  <a href="#">
-    <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  </a>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--border&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;/a&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--browser</h3>
-                    <p class="kss-mod-desc"><p>A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--browser">
-  <a href="#">
-    <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  </a>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--browser&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;/a&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>A figure that visually breaks the container when there is space available.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--breakout">
-  <a href="#">
-    <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  </a>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--breakout&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;/a&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-            </ol>
-
-          <section class="kss-depth-2" id="section-1.1">
-
-          <h1 class="kss-title"><span class="kss-ref">1.1</span> - Figure with Caption</h1>
-
-            <div class="kss-box"><p>Descriptions of figures.</p>
-</div>
-
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <figure class="">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;figure class=&quot;&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--aside</h3>
-                    <p class="kss-mod-desc"><p>A figure with the caption as marginalia when possible.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--aside">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--aside&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--border</h3>
-                    <p class="kss-mod-desc"><p>A figure framed with a border.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--border">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--border&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--browser</h3>
-                    <p class="kss-mod-desc"><p>A figure framed with browser chrome. (Should respond to vertical media queries to change device.)</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--browser">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--browser&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>A figure that visually breaks the container when there is space available.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--breakout">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--breakout&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--overlay</h3>
-                    <p class="kss-mod-desc"><p>An image with an optional overlayed caption.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--overlay">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--overlay&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--overlay.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>A combination of the breakout and overlay modules.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--overlay figure--breakout">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--overlay figure--breakout&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;figcaption&gt;Jacques-Louis David, &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt; or &lt;cite&gt;Bonaparte at the St Bernard Pass&lt;/cite&gt;, &lt;time&gt;1800–1&lt;/time&gt;. Oil on canvas, 102 × 87&lt;abbr&gt;in&lt;/abbr&gt; (260 × 221&lt;abbr&gt;cm&lt;/abbr&gt;). Chateau de Malmaison, Rueil-Malmaison.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-            </ol>
-
-          </section>
-          <section class="kss-depth-2" id="section-1.2">
-
-          <h1 class="kss-title"><span class="kss-ref">1.2</span> - Figure with Children</h1>
-
-            <div class="kss-box"><p>Diptychs, triptychs, etc.</p>
-</div>
-
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <figure class="">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;figure class=&quot;&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--aside</h3>
-                    <p class="kss-mod-desc"><p>A figure with the caption as marginalia when possible.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--aside">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--aside&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--border</h3>
-                    <p class="kss-mod-desc"><p>A figure framed with a border.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--border">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--border&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>A figure that visually breaks the container when there is space available.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--breakout">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--breakout&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--breakout.figure--border</h3>
-                    <p class="kss-mod-desc"><p>A combination of the breakout and border modules.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--breakout figure--border">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--breakout figure--border&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--triptych</h3>
-                    <p class="kss-mod-desc"><p>Three images shown as equals</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--triptych">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--triptych&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--triptych.figure--aside</h3>
-                    <p class="kss-mod-desc"><p>Three images shown as equals</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--triptych figure--aside">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--triptych figure--aside&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--triptych.figure--border</h3>
-                    <p class="kss-mod-desc"><p>Three images shown as equals</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--triptych figure--border">
-  <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-  <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-  <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
-  <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--triptych figure--border&quot;&gt;
-  &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
-  &lt;img src=&quot;public/images/example-5.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Belvedere version)&quot; /&gt;
-  &lt;img src=&quot;public/images/example-2.jpg&quot; alt=&quot;Napoleon Crossing the Alps (Second version)&quot; /&gt;
-  &lt;figcaption&gt;Three of the five versions of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;: the first Versailles, Belvedere, and second Versailles.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-            </ol>
-
-          </section>
-          <section class="kss-depth-3" id="section-1.2.1">
-
-          <h1 class="kss-title"><span class="kss-ref">1.2.1</span> - Figure with URL</h1>
-
-
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <!-- The figure title becomes part of the browser chrome -->
-<figure class="figure--browser " title="napoleon.club">
-  <a href="#">
-    <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
   </a>
   <figcaption>The Napoleon Fan Club website.</figcaption>
 </figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;!-- The figure title becomes part of the browser chrome --&gt;
-&lt;figure class=&quot;figure--browser &quot; title=&quot;napoleon.club&quot;&gt;
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!-- The figure title becomes part of the browser chrome --&gt;
+&lt;figure class=&quot;figure--browser [modifier class]&quot; title=&quot;napoleon.club&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;public/images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
+    &lt;img src=&quot;images/example-1.jpg&quot; alt=&quot;Napoleon Crossing the Alps&quot; /&gt;
   &lt;/a&gt;
   &lt;figcaption&gt;The Napoleon Fan Club website.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-            </ol>
+&lt;/figure&gt;</code></pre>
+      </div>
 
-          </section>
-          <section class="kss-depth-2" id="section-1.3">
+      </section>
+</article>
 
-          <h1 class="kss-title"><span class="kss-ref">1.3</span> - Figure with Responsive Embeded Media</h1>
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
 
-            <div class="kss-box"><p>Generic embedded media, like a YouTube video or Twitter card.</p>
-</div>
 
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <figure class="figure--embed ">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;figure class=&quot;figure--embed &quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--aside</h3>
-                    <p class="kss-mod-desc"><p>Embeded media that has a caption as marginalia, when possible.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--aside">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--aside&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--border</h3>
-                    <p class="kss-mod-desc"><p>Embeded media framed with a border.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--border">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--border&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>Embeded media that visually breaks the container when there is space available.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--breakout">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--breakout&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--overlay</h3>
-                    <p class="kss-mod-desc"><p>Embeded media with an overlayed caption.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--overlay">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--overlay&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--overlay.figure--breakout</h3>
-                    <p class="kss-mod-desc"><p>A combination of the breakout and overlay modules.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--overlay figure--breakout">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--overlay figure--breakout&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--square</h3>
-                    <p class="kss-mod-desc"><p>Embeded media scaled or cropped within a square. Works especially well with Vine and Instagram.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--square">
-  <div class="embed-container">
-    <iframe async defer src="http://player.vimeo.com/video/35152332" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>Hand-painted reproduction of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>, using oil on blank linen canvas.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--square&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;http://player.vimeo.com/video/35152332&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;Hand-painted reproduction of Jacques-Louis David’s &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, using oil on blank linen canvas.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-            </ol>
 
-          </section>
-          <section class="kss-depth-3" id="section-1.3.1">
-
-          <h1 class="kss-title"><span class="kss-ref">1.3.1</span> - Figure with Square Embed</h1>
-
-            <div class="kss-box"><p>A pre-sized embed, like an Instagram photo.</p>
-</div>
-
-            <ol class="kss-mod-list">
-              <li class="kss-mod-item">
-                <header class="kss-mod-desc-group">
-                  <h3 class="kss-mod-name">Default styling</h3>
-                  <!-- <p class="kss-mod-desc"></p> -->
-                </header>
-                <div class="kss-mod-example">
-                  <figure class="figure--embed figure--square ">
-  <div class="embed-container">
-    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-  </div>
-  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
-</figure>
-                </div>
-                <pre class="kss-markup language-markup">
-                  <code>&lt;figure class=&quot;figure--embed figure--square &quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;//instagram.com/p/kz8ibZkn0C/embed/&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;A contemporary, Kurdish version of &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, seen on the streets of Arbil.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                </pre>
-              </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--aside</h3>
-                    <p class="kss-mod-desc"><p>A figure with the caption as marginalia when possible.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--square figure--aside">
-  <div class="embed-container">
-    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-  </div>
-  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--square figure--aside&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;//instagram.com/p/kz8ibZkn0C/embed/&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;A contemporary, Kurdish version of &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, seen on the streets of Arbil.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-                <li>
-                  <header class="kss-mod-desc-group">
-                    <h3 class="kss-mod-name">.figure--border</h3>
-                    <p class="kss-mod-desc"><p>A figure with a border.</p>
-</p>
-                  </header>
-                  <div class="kss-mod-example">
-                    <figure class="figure--embed figure--square figure--border">
-  <div class="embed-container">
-    <iframe async defer src="//instagram.com/p/kz8ibZkn0C/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-  </div>
-  <figcaption>A contemporary, Kurdish version of <cite>Napoleon Crossing the Alps</cite>, seen on the streets of Arbil.</figcaption>
-</figure>
-                  </div>
-                  <pre class="kss-markup language-markup">
-                    <code>&lt;figure class=&quot;figure--embed figure--square figure--border&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe async defer src=&quot;//instagram.com/p/kz8ibZkn0C/embed/&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;A contemporary, Kurdish version of &lt;cite&gt;Napoleon Crossing the Alps&lt;/cite&gt;, seen on the streets of Arbil.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
-                  </pre>
-                </li>
-            </ol>
-
-          </section>
-      </article>
-    </div>
-  </div>
-<script src="public/prism.js"></script>
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>
