@@ -29,7 +29,7 @@ body {
 // Markup:
 // <figure class="{{modifier_class}}">
 //   <a href="#">
-//     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//     <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   </a>
 // </figure>
 //
@@ -90,9 +90,9 @@ figure {
     //
     // Markup:
     // <figure class="{{modifier_class}}">
-    //   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
-    //   <img src="public/images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
-    //   <img src="public/images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
+    //   <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+    //   <img src="images/example-5.jpg" alt="Napoleon Crossing the Alps (Belvedere version)" />
+    //   <img src="images/example-2.jpg" alt="Napoleon Crossing the Alps (Second version)" />
     //   <figcaption>Three of the five versions of Jacques-Louis David’s <cite>Napoleon Crossing the Alps</cite>: the first Versailles, Belvedere, and second Versailles.</figcaption>
     // </figure>
     //
@@ -126,7 +126,7 @@ figure {
 // <!-- The figure title becomes part of the browser chrome -->
 // <figure class="figure--browser {{modifier_class}}" title="napoleon.club">
 //   <a href="#">
-//     <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//     <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   </a>
 //   <figcaption>The Napoleon Fan Club website.</figcaption>
 // </figure>
@@ -231,7 +231,7 @@ figure {
 //
 // Markup:
 // <figure class="{{modifier_class}}">
-//   <img src="public/images/example-1.jpg" alt="Napoleon Crossing the Alps" />
+//   <img src="images/example-1.jpg" alt="Napoleon Crossing the Alps" />
 //   <figcaption>Jacques-Louis David, <cite>Napoleon Crossing the Alps</cite> or <cite>Bonaparte at the St Bernard Pass</cite>, <time>1800–1</time>. Oil on canvas, 102 × 87<abbr>in</abbr> (260 × 221<abbr>cm</abbr>). Chateau de Malmaison, Rueil-Malmaison.</figcaption>
 // </figure>
 //
