@@ -40,11 +40,11 @@ $fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
 // .figure--browser   - A figure framed with browser chrome. Implementation partially based on <a href="http://codepen.io/rendro/pen/nbxli">Robert Fleischmann’s pen</a>.
 // .figure--breakout  - A figure that visually breaks the container when there is space available.
 //
+// TODO .figure--breakout.figure--browser  - A combination of the breakout and browser modules. (needs flexbox for url box)
+// TODO .figure--crop                      - A figure that can be cropped acceptably at smaller screen sizes.
+// TODO .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
+//
 // Styleguide: figment
-
-// .figure--breakout.figure--browser  - A combination of the breakout and browser modules. (needs flexbox for url box)
-// .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
-// .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
 
 .figure,
 figure {
@@ -87,6 +87,8 @@ figure {
       margin-bottom: 0;
       margin-right: 0
     }
+
+
     // Figure with Children
     //
     // Diptychs, triptychs, etc.
@@ -232,6 +234,7 @@ figure {
   }
 }
 
+
 // Figure with Caption
 //
 // Descriptions of figures.
@@ -250,11 +253,6 @@ figure {
 // .figure--overlay.figure--breakout - A combination of the breakout and overlay modules.
 //
 // Styleguide: figment.caption
-
-// .figure--cropped  - A figure that can be acceptably cropped at certain screen sizes.
-// .figure--device   - A figure framed with a mobile device. (Undecided how to specfiy a device.)
-// .figure--embed    - A figure with media embedded from another service. (ex. Instagram, Vimeo, Twitter card.)
-// .figure--square   - A figure contained within the largest square possible. (Could be part of embed.)
 
 .figure-caption,
 figcaption {
@@ -305,7 +303,7 @@ figcaption {
       }
     }
   }
-  // PROBLEM
+  // TODO
   // Aside and breakout is just too large
   // Either fix how columns are calcualted,
   // change breakpoints, etc.
@@ -405,11 +403,15 @@ figcaption {
   }
 }
 
+// Figure with Triptych
+//
 // Ideally, want to depricate this class
 // and have it happen automatically if
 // there are three items included rather
 // than having to explicitly declare
 // it with this class
+//
+// No styleguide reference.
 .figure--triptych {
   img,
   svg,
@@ -444,7 +446,7 @@ figcaption {
   }
 }
 
-// Possibly use [~instagram] kinda thing to get the numbers right
+// TODO Possibly use [~instagram] kinda thing to get the numbers right
 // Basically, should be able to drop in the iframe from Embed Responsively
 // without needing the inline CSS
 .embed-container {
