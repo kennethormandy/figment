@@ -6,7 +6,7 @@
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "license": "MIT",
   "private": true,
-  "repository": "git@github.com:kennethormandy/fig.git",
+  "repository": "git@github.com:kennethormandy/figment.git",
   "keywords": [],
   "scripts": {
     "clean": "trash examples/figment.scss",
