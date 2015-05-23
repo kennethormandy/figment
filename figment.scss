@@ -3,7 +3,7 @@
 // Variables
 //
 // No styleguide reference.
-$fig-numbered:     true             !default;
+$fig-numbered:     false            !default;
 $fig-border-color: #555             !default;
 $fig-bg-color:     rgba(#FFF, 0.75) !default;
 $fig-container:    43em             !default;
@@ -18,9 +18,12 @@ $fig-col-width:    ($fig-container - ($fig-gutter * 7)) / 8 !default;
   $fig-browser-color: #FFF !default;
 }
 
-body {
-  counter-reset: fig;
+@if($fig-numbered == true) {
+  body {
+    counter-reset: fig;
+  }
 }
+
 
 // Figure
 //
