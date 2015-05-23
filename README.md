@@ -19,15 +19,26 @@ It gives you:
 
 ## Getting started
 
-This isn’t really ready to use yet, but if you’d like to take a look:
+To run the project locally, clone it and then move into that directory:
 
-```
+```sh
 git clone http://github.com/kennethormandy/figment
 cd figment
-npm install -g harp
-harp server
-open http://localhost:9000/examples/section-1
 ```
+
+Next, install the development dependencies using [npm](https://npmjs.org):
+
+```sh
+npm install
+```
+
+Finally, run the project:
+
+```sh
+npm start
+```
+
+How, [Harp](http://harpjs.com) is serving it locally for you at [localhost:9000](http://localhost:9000).
 
 ## API
 
