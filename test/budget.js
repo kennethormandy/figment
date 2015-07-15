@@ -1,0 +1,25 @@
+var fs = require('fs')
+var cssstats = require('cssstats')
+var sass = require('node-sass')
+var scss = fs.readFileSync('./figment.scss', 'utf8')
+var should = require('should')
+var output = sass.renderSync({ data: scss })
+var figment = output.css.toString()
+var stats = cssstats(figment)
+
+describe('Figment', function () {
+  it('should not break selector budget', function (done) {
+    should.exist(stats.aggregates.classSelectors)
+    stats.aggregates.classSelectors.should.be.below(167)
+    // should.exist(stats)
+    // should.exist(patterns.liga)
+    // should.not.exist(patterns.dlig)
+    // should.not.exist(patterns['ss01'])
+    done()
+  })
+  it('should not break media query budget', function (done) {
+    should.exist(stats.aggregates.mediaQueries)
+    stats.aggregates.mediaQueries.length.should.be.below(7)
+    done()
+  })
+})
