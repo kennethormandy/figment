@@ -18,3 +18,5 @@ www/
 _book/
 public/styleguide/
 examples/figment.scss
+test/fixtures/failed
+test/fixtures/screenshots

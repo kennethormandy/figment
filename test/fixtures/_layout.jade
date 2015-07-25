@@ -1,0 +1,11 @@
+doctype
+html
+  head
+    title Figment Tests
+    style.
+      html { height: 100%; background-color: #FFF; }
+      body { margin: 0 auto; max-width: 50em; outline: 1px solid blue; padding: 1em; }
+      figure { margin: 0; } /* Maybe make this part of the lib? */
+    link(href="/figment.css" rel="stylesheet")
+  body
+    != yield
