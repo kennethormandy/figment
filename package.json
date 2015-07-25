@@ -8,6 +8,7 @@
   "private": true,
   "repository": "git@github.com:kennethormandy/figment.git",
   "keywords": [],
+  "ignore": ["test", "examples"],
   "scripts": {
     "clean": "trash examples/figment.scss",
     "copy": "cp figment.scss ./examples/",
