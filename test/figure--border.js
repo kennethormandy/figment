@@ -9,19 +9,22 @@ var resemble = require('node-resemble')
 describe('.figure--border', function () {
 
   before(function(done) {
-    harp.server(__dirname + '/../', { port: 9005 })
+    var port = 9006
+
+    harp.server(__dirname + '/../', { port: port })
 
     new Nightmare()
       .viewport(1024, 768) // Classic!
-      .goto('http://localhost:9005/test/fixtures/figure--border')
+      .goto('http://localhost:' + port + '/test/fixtures/figure--border')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--border--1024x768.png'))
       .run()
 
     new Nightmare()
       .viewport(640, 480) // Classic!
-      .goto('http://localhost:9005/test/fixtures/figure--border')
+      .goto('http://localhost:' + port + '/test/fixtures/figure--border')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--border--640x480.png'))
       .run(done)
+
   })
 
   it('Should match reference at 640×480 viewport', function (done) {
