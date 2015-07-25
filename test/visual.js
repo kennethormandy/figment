@@ -1,52 +1,59 @@
-var Nightmare = require('nightmare')
-var should = require('should')
-var hux = require('huxley')
-var harp = require('harp')
 var fs = require('fs')
 var path = require('path')
+var harp = require('harp')
+var trash = require('trash')
+var should = require('should')
+var Nightmare = require('nightmare')
 var resemble = require('node-resemble')
 
 describe('nightmare', function () {
 
-  // Still need to make this work from a clean install
-  // KSS, etc.
   before(function(done) {
-    harp.server(__dirname + '/../examples', { port: 9005 })
+    harp.server(__dirname + '/../', { port: 9005 })
 
     new Nightmare()
-      .goto('http://google.com')
-      .screenshot(path.join('./test/fixtures', '1.png'))
+      .viewport(1024, 768) // Classic!
+      .goto('http://localhost:9005/test/fixtures/figure--border')
+      .screenshot(path.join('./test/fixtures/screenshots', 'figure--border.png'))
       .run(done)
   })
 
-  // it('Should load the styleguide', function (done) {
-  //   new Nightmare()
-  //     .goto('http://localhost:9005')
-  //     .evaluate(function () {
-  //       return document.querySelector('h1').innerText
-  //     }, function(el) {
-  //       el.should.equal('KSS Style Guide')
-  //     })
-  //     .run(done)
-  // })
-
-
   it('Should take a screenshot diff', function (done) {
 
-    var fileTest = './test/fixtures/1.png'
-    var fileRef = './test/fixtures/reference/1.png'
+    var fileName = 'figure--border.png'
+    var pathBase = './test/fixtures/'
+    var pathRef = pathBase + '/reference/'
+    var pathTest = pathBase + '/screenshots/'
+    var pathFail = pathBase + '/failed/'
 
-    resemble(fileTest).compareTo(fileRef).ignoreColors().onComplete(function(data) {
+    resemble(pathTest + fileName).compareTo(pathRef + fileName).ignoreColors().onComplete(function(data) {
       var misMatch = parseInt(data.misMatchPercentage, 10)
 
       // should be the same dimensions
       data.isSameDimensions.should.be.ok
 
-      // should match exactly
+      // This seems dumb, since I check it twice
+      // But it works for now
+      if(misMatch !== 0) {
+        fs.rename(pathTest + fileName, pathFail + fileName)
+      }
+
+      // Should match exactly
+      // Change this value for less precision
       misMatch.should.equal(0)
 
       done()
-    });
+    })
 
+    after(function(done) {
+
+      // After all tests, remove the generated images
+      // that didn’t get moved to the `failed/` directory
+      trash(['./test/fixtures/screenshots'], function (err) {
+        console.log(err)
+      })
+
+      done()
+    })
   })
 })

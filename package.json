@@ -28,6 +28,6 @@
     "node-sass": "^3.0.0-beta.5",
     "should": "^7.0.2",
     "surge": "latest",
-    "trash": "^1.4.1"
+    "trash": "1.4.1"
   }
 }
