@@ -23,13 +23,13 @@ describe('.figure--aside', function () {
       .viewport(640, 480) // Classic!
       .goto('http://localhost:' + port + '/test/fixtures/figure--aside')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--aside--640x480.png'))
-      .run(done)
+      .run()
 
     new Nightmare()
       .viewport(1440, 900) // Classic!
       .goto('http://localhost:' + port + '/test/fixtures/figure--aside')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--aside--1440x900.png'))
-      .run(done)
+      .run()
 
 
     new Nightmare()

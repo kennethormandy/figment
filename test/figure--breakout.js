@@ -23,13 +23,13 @@ describe('.figure--breakout', function () {
       .viewport(640, 480) // Classic!
       .goto('http://localhost:' + port + '/test/fixtures/figure--breakout')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--breakout--640x480.png'))
-      .run(done)
+      .run()
 
     new Nightmare()
       .viewport(1440, 900) // Classic!
       .goto('http://localhost:' + port + '/test/fixtures/figure--breakout')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--breakout--1440x900.png'))
-      .run(done)
+      .run()
 
 
     new Nightmare()
@@ -146,9 +146,9 @@ describe('.figure--breakout', function () {
 
     // After all tests, remove the generated images
     // that didn’t get moved to the `failed/` directory
-    // trash(['./test/fixtures/screenshots'], function (err) {
-    //   console.log(err)
-    // })
+    trash(['./test/fixtures/screenshots'], function (err) {
+      console.log(err)
+    })
 
     done()
   })
