@@ -1,7 +1,6 @@
 var fs = require('fs')
 var path = require('path')
 var harp = require('harp')
-var trash = require('trash')
 var should = require('should')
 var Nightmare = require('nightmare')
 var resemble = require('node-resemble')
@@ -41,12 +40,6 @@ describe('.figure--border', function () {
       // should be the same dimensions
       data.isSameDimensions.should.be.ok
 
-      // This seems dumb, since I check it twice
-      // But it works for now
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
-
       // Should match exactly
       // Change this value for less precision
       misMatch.should.equal(0)
@@ -64,26 +57,9 @@ describe('.figure--border', function () {
 
     resemble(pathTest + fileName).compareTo(pathRef + fileName).ignoreColors().onComplete(function(data) {
       var misMatch = parseInt(data.misMatchPercentage, 10)
-
       data.isSameDimensions.should.be.ok
-
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
-
       misMatch.should.equal(0)
       done()
     })
-  })
-
-  after(function(done) {
-
-    // After all tests, remove the generated images
-    // that didn’t get moved to the `failed/` directory
-    trash(['./test/fixtures/screenshots'], function (err) {
-      console.log(err)
-    })
-
-    done()
   })
 })

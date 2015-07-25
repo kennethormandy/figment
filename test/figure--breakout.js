@@ -1,7 +1,6 @@
 var fs = require('fs')
 var path = require('path')
 var harp = require('harp')
-var trash = require('trash')
 var should = require('should')
 var Nightmare = require('nightmare')
 var resemble = require('node-resemble')
@@ -20,20 +19,20 @@ describe('.figure--breakout', function () {
       .run()
 
     new Nightmare()
-      .viewport(640, 480) // Classic!
+      .viewport(640, 480)
       .goto('http://localhost:' + port + '/test/fixtures/figure--breakout')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--breakout--640x480.png'))
       .run()
 
     new Nightmare()
-      .viewport(1440, 900) // Classic!
+      .viewport(1440, 900)
       .goto('http://localhost:' + port + '/test/fixtures/figure--breakout')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--breakout--1440x900.png'))
       .run()
 
 
     new Nightmare()
-      .viewport(2560, 1440) // Classic!
+      .viewport(2560, 1440)
       .goto('http://localhost:' + port + '/test/fixtures/figure--breakout')
       .screenshot(path.join('./test/fixtures/screenshots', 'figure--breakout--2560x1440.png'))
       .run(done)
@@ -53,12 +52,6 @@ describe('.figure--breakout', function () {
       // should be the same dimensions
       data.isSameDimensions.should.be.ok
 
-      // This seems dumb, since I check it twice
-      // But it works for now
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
-
       // Should match exactly
       // Change this value for less precision
       misMatch.should.equal(0)
@@ -76,13 +69,7 @@ describe('.figure--breakout', function () {
 
     resemble(pathTest + fileName).compareTo(pathRef + fileName).ignoreColors().onComplete(function(data) {
       var misMatch = parseInt(data.misMatchPercentage, 10)
-
       data.isSameDimensions.should.be.ok
-
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
-
       misMatch.should.equal(0)
       done()
     })
@@ -101,12 +88,6 @@ describe('.figure--breakout', function () {
 
       // should be the same dimensions
       data.isSameDimensions.should.be.ok
-
-      // This seems dumb, since I check it twice
-      // But it works for now
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
 
       // Should match exactly
       // Change this value for less precision
@@ -129,27 +110,10 @@ describe('.figure--breakout', function () {
       // should be the same dimensions
       data.isSameDimensions.should.be.ok
 
-      // This seems dumb, since I check it twice
-      // But it works for now
-      if(misMatch !== 0) {
-        fs.rename(pathTest + fileName, pathFail + fileName)
-      }
-
       // Should match exactly
       // Change this value for less precision
       misMatch.should.equal(0)
       done()
     })
-  })
-
-  after(function(done) {
-
-    // After all tests, remove the generated images
-    // that didn’t get moved to the `failed/` directory
-    trash(['./test/fixtures/screenshots'], function (err) {
-      console.log(err)
-    })
-
-    done()
   })
 })
