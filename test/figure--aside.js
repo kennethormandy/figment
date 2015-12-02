@@ -9,8 +9,11 @@ describe('.figure--aside', function () {
 
   before(function(done) {
     var port = 9005
+    var loc = path.resolve(__dirname, '../')
 
-    harp.server(__dirname + '/../', { port: port })
+    console.log(loc)
+
+    harp.server(loc, { port: port })
 
     new Nightmare()
       .viewport(1024, 768) // Classic!

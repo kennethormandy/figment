@@ -10,7 +10,7 @@ describe('.figure--breakout', function () {
   before(function(done) {
     var port = 9007
 
-    harp.server(__dirname + '/../', { port: port })
+    harp.server(path.resolve(__dirname, '../'), { port: port })
 
     new Nightmare()
       .viewport(1024, 768) // Classic!
